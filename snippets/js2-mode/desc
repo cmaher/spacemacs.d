@@ -1,0 +1,6 @@
+#key : desc
+#name : describe block
+# --
+describe("$1", function () {
+	$0
+});

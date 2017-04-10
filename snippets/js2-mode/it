@@ -1,0 +1,6 @@
+#key : it
+#desc : it block
+# --
+it("$1", function () {
+	$0
+});

@@ -1,0 +1,6 @@
+# key : befe
+# name : beforeEach block
+# ---
+beforeEach(function () {
+	$0
+});

@@ -1,0 +1,4 @@
+#key : funn
+#name: function with args
+function ($1) {
+}$0
