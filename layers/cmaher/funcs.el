@@ -48,6 +48,10 @@
   (define-key evil-visual-state-map (kbd "h") evil-inner-text-objects-map)
 
   ;; j -> (j)ump [next]
+  (define-key evil-normal-state-map (kbd "j") nil)
+  (define-key evil-normal-state-map (kbd "J") nil)
+  (define-key evil-visual-state-map (kbd "j") nil)
+  (define-key evil-visual-state-map (kbd "J") nil)
   (define-key evil-motion-state-map (kbd "j") 'evil-search-next)
   (define-key evil-motion-state-map (kbd "J") 'evil-search-previous)
 
