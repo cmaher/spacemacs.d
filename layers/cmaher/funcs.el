@@ -2,39 +2,39 @@
   "Configure evil mode for workman layout"
 
   ;; Remap movement keys
-  (define-key evil-motion-state-map (kbd "n") 'evil-backward-char)
-  (define-key evil-motion-state-map (kbd "N") 'evil-window-top) (spacemacs/set-leader-keys
+  (define-key evil-motion-state-map "n" 'evil-backward-char)
+  (define-key evil-motion-state-map "N" 'evil-window-top) (spacemacs/set-leader-keys
     "wh" nil
     "wH" nil
     "wn" 'evil-window-left
     "wN" 'evil-window-move-far-left)
 
-  (define-key evil-motion-state-map (kbd "e") 'evil-next-line)
-  (define-key evil-motion-state-map (kbd "E") 'evil-join)
+  (define-key evil-motion-state-map "e" 'evil-next-line)
+  (define-key evil-motion-state-map "E" 'evil-join)
   (spacemacs/set-leader-keys
     "wj" nil
     "wJ" nil
     "we" 'evil-window-down
     "wE" 'evil-window-move-very-bottom)
 
-  (define-key evil-normal-state-map (kbd "o") nil)
-  (define-key evil-normal-state-map (kbd "O") nil)
-  (define-key evil-visual-state-map (kbd "o") nil)
-  (define-key evil-visual-state-map (kbd "O") nil)
-  (define-key evil-motion-state-map (kbd "o") 'evil-previous-line)
-  (define-key evil-motion-state-map (kbd "O") 'evil-lookup)
+  (define-key evil-normal-state-map "o" nil)
+  (define-key evil-normal-state-map "O" nil)
+  (define-key evil-visual-state-map "o" nil)
+  (define-key evil-visual-state-map "O" nil)
+  (define-key evil-motion-state-map "o" 'evil-previous-line)
+  (define-key evil-motion-state-map "O" 'evil-lookup)
   (spacemacs/set-leader-keys
     "wk" nil
     "wK" nil
     "wo" 'evil-window-up
     "wO" 'evil-window-move-very-top)
 
-  (define-key evil-normal-state-map (kbd "i") nil)
-  (define-key evil-normal-state-map (kbd "I") nil)
-  (define-key evil-visual-state-map (kbd "i") nil)
-  (define-key evil-visual-state-map (kbd "I") nil)
-  (define-key evil-motion-state-map (kbd "i") 'evil-forward-char)
-  (define-key evil-motion-state-map (kbd "I") 'evil-window-bottom)
+  (define-key evil-normal-state-map "i" nil)
+  (define-key evil-normal-state-map "I" nil)
+  (define-key evil-visual-state-map "i" nil)
+  (define-key evil-visual-state-map "I" nil)
+  (define-key evil-motion-state-map "i" 'evil-forward-char)
+  (define-key evil-motion-state-map "I" 'evil-window-bottom)
   (spacemacs/set-leader-keys
     "wl" nil
     "wL" nil
@@ -42,37 +42,37 @@
     "wI" 'evil-window-move-far-right)
 
   ;; h -> (h)ack [insert]
-  (define-key evil-normal-state-map (kbd "h") 'evil-insert)
-  (define-key evil-normal-state-map (kbd "H") 'evil-insert-line)
-  (define-key evil-operator-state-map (kbd "h") evil-inner-text-objects-map)
-  (define-key evil-visual-state-map (kbd "h") evil-inner-text-objects-map)
+  (define-key evil-normal-state-map "h" 'evil-insert)
+  (define-key evil-normal-state-map "H" 'evil-insert-line)
+  (define-key evil-operator-state-map "h" evil-inner-text-objects-map)
+  (define-key evil-visual-state-map "h" evil-inner-text-objects-map)
 
   ;; j -> (j)ump [next]
-  (define-key evil-normal-state-map (kbd "j") nil)
-  (define-key evil-normal-state-map (kbd "J") nil)
-  (define-key evil-visual-state-map (kbd "j") nil)
-  (define-key evil-visual-state-map (kbd "J") nil)
-  (define-key evil-motion-state-map (kbd "j") 'evil-search-next)
-  (define-key evil-motion-state-map (kbd "J") 'evil-search-previous)
+  (define-key evil-normal-state-map "j" nil)
+  (define-key evil-normal-state-map "J" nil)
+  (define-key evil-visual-state-map "j" nil)
+  (define-key evil-visual-state-map "J" nil)
+  (define-key evil-motion-state-map "j" 'evil-search-next)
+  (define-key evil-motion-state-map "J" 'evil-search-previous)
 
   ;; k -> brea(k) [end]
-  (define-key evil-motion-state-map (kbd "k") 'evil-forward-word-end)
-  (define-key evil-motion-state-map (kbd "K") 'evil-forward-WORD-end)
+  (define-key evil-motion-state-map "k" 'evil-forward-word-end)
+  (define-key evil-motion-state-map "K" 'evil-forward-WORD-end)
 
   ;; l -> (l)ine [open line]
-  (define-key evil-normal-state-map (kbd "l") 'evil-open-below)
-  (define-key evil-normal-state-map (kbd "L") 'evil-open-above)
+  (define-key evil-normal-state-map "l" 'evil-open-below)
+  (define-key evil-normal-state-map "L" 'evil-open-above)
 
   (setq neo-theme 'arrow)
   (with-eval-after-load 'neotree
-    (evil-define-key 'evilified neotree-mode-map (kbd "h") nil)
-    (evil-define-key 'evilified neotree-mode-map (kbd "j") nil)
-    (evil-define-key 'evilified neotree-mode-map (kbd "k") nil)
-    (evil-define-key 'evilified neotree-mode-map (kbd "l") nil)
-    (evil-define-key 'evilified neotree-mode-map (kbd "n") 'spacemacs/neotree-collapse-or-up)
-    (evil-define-key 'evilified neotree-mode-map (kbd "e") 'neotree-next-line)
-    (evil-define-key 'evilified neotree-mode-map (kbd "o") 'neotree-previous-line)
-    (evil-define-key 'evilified neotree-mode-map (kbd "i") 'spacemacs/neotree-expand-or-open)
+    (evil-define-key 'evilified neotree-mode-map "h" nil)
+    (evil-define-key 'evilified neotree-mode-map "j" nil)
+    (evil-define-key 'evilified neotree-mode-map "k" nil)
+    (evil-define-key 'evilified neotree-mode-map "l" nil)
+    (evil-define-key 'evilified neotree-mode-map "n" 'spacemacs/neotree-collapse-or-up)
+    (evil-define-key 'evilified neotree-mode-map "e" 'neotree-next-line)
+    (evil-define-key 'evilified neotree-mode-map "o" 'neotree-previous-line)
+    (evil-define-key 'evilified neotree-mode-map "i" 'spacemacs/neotree-expand-or-open)
     )
   )
 
@@ -127,17 +127,39 @@
   )
 
 (defun cmaher/lisp-state ()
+  (define-key evil-lisp-state-map "n" 'sp-backward-symbol)
+  (define-key evil-lisp-state-map "N" 'sp-backward-sexp)
+
+  (define-key evil-lisp-state-map "e" 'lisp-state-next-closing-paren)
+  (define-key evil-lisp-state-map "E" 'sp-forward-sexp)
+
+  (define-key evil-lisp-state-map "o" 'lisp-state-prev-opening-paren)
+  (define-key evil-lisp-state-map "O" 'sp-forward-sexp)
+
+  (define-key evil-lisp-state-map "i" 'lisp-state-forward-symbol)
+  (define-key evil-lisp-state-map "I" 'sp-forward-sexp)
+
+  (define-key evil-lisp-state-map "h" 'evil-insert-state)
+  (define-key evil-lisp-state-map "H" 'evil-insert-line)
+
+  (define-key evil-lisp-state-map "k" 'sp-splice-sexp-killing-forward)
+  (define-key evil-lisp-state-map "K" 'sp-splice-sexp-killing-backward)
+
+  (define-key evil-lisp-state-map "j" nil)
+  (define-key evil-lisp-state-map "J" nil)
+  (define-key evil-lisp-state-map "l" nil)
+  (define-key evil-lisp-state-map "L" nil)
+
+
   (spacemacs/set-leader-keys
-    "K" 'lisp-state-toggle-lisp-state)
-  ;; (spacemacs/set-leader-keys-for-major-mode 'evil-lisp-state
-  ;;   ""
-  ;;   )
+    "k" 'lisp-state-toggle-lisp-state
+    )
   )
 
-(defun cmaher/init-all ()
+(defun cmaher/init-all
   (cmaher/workman)
   (cmaher/projectile)
   (cmaher/javascript)
   (cmaher/indent)
-  (cmaher/lisp)
+  (cmaher/lisp-state)
   )
