@@ -126,10 +126,19 @@
     )
   )
 
+(defun cmaher/lisp-state ()
+  (spacemacs/set-leader-keys
+    "K" 'lisp-state-toggle-lisp-state)
+  ;; (spacemacs/set-leader-keys-for-major-mode 'evil-lisp-state
+  ;;   ""
+  ;;   )
+  )
+
 (defun cmaher/init-all ()
   (cmaher/workman)
   (cmaher/projectile)
   (cmaher/javascript)
   (cmaher/indent)
   (cmaher/auto-complete)
+  (cmaher/lisp)
   )
