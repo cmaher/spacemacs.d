@@ -139,6 +139,5 @@
   (cmaher/projectile)
   (cmaher/javascript)
   (cmaher/indent)
-  (cmaher/auto-complete)
   (cmaher/lisp)
   )
