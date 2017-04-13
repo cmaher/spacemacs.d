@@ -156,7 +156,7 @@
     )
   )
 
-(defun cmaher/init-all
+(defun cmaher/init-all ()
   (cmaher/workman)
   (cmaher/projectile)
   (cmaher/javascript)
