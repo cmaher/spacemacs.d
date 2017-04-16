@@ -152,7 +152,7 @@
 
 
   (spacemacs/set-leader-keys
-    "k" 'lisp-state-toggle-lisp-state
+    "K" 'lisp-state-toggle-lisp-state
     )
   )
 
